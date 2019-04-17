@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<contacts>
+    <contact id="001">
+        <name>张三</name>
+        <age>23</age>
+        <mobile>12234567890</mobile>
+        <email>123@qq.com</email>
+        <qq>123456</qq>
+    </contact>
+    <contact id="002">
+        <name>李四</name>
+        <age>23</age>
+        <mobile>12234567890</mobile>
+        <email>123@qq.com</email>
+        <qq>123456</qq>
+    </contact>
+</contacts>
