@@ -5,8 +5,6 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-import static org.junit.Assert.*;
-
 public class Dom4jExerciseTest {
 
     @Test
@@ -22,5 +20,10 @@ public class Dom4jExerciseTest {
     @Test
     public void deleteStudent() throws IOException, DocumentException {
         new Dom4jExercise().deleteStudent();
+    }
+
+    @Test
+    public void createXml() throws IOException {
+        new Dom4jExercise().createXml();
     }
 }

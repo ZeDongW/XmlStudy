@@ -118,4 +118,39 @@ public class Dom4jExercise {
         String target = "src/main/Resource/Students.xml";
         Dom4jUtils.writeDocument(target,dom);
     }
+
+    /**
+     * @Author: ZeDongW
+     * @Description: 创建Users.xml文件
+     * @Date: 2019/4/18 0018 7:04
+     * @Param: []
+     * @return: void
+     */
+    public void createXml() throws IOException {
+        //创建一个文档对象
+        Document dom= DocumentHelper.createDocument();
+
+        //创建根标签
+        Element users = dom.addElement("Users");
+
+        Element user1 = users.addElement("User");
+        user1.addAttribute("id","001");
+        user1.addAttribute("name","张三");
+        user1.addAttribute("password","123456");
+
+        Element user2 = users.addElement("User");
+        user2.addAttribute("id","002");
+        user2.addAttribute("name","李四");
+        user2.addAttribute("password","abcdef");
+
+        Element user3 = users.addElement("User");
+        user3.addAttribute("id","003");
+        user3.addAttribute("name","王五");
+        user3.addAttribute("password","abc123");
+
+        String target = "src/main/Resource/Users.xml";
+
+        //写入Xml
+        Dom4jUtils.writeDocument(target,dom);
+    }
 }
