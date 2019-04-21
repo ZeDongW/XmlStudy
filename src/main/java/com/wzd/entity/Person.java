@@ -16,18 +16,18 @@ public class Person {
 
     private String name; //姓名
 
-    private int age; //年龄
+    private String age; //年龄
 
     private String mobile; //手机号
 
     private  String email; //邮箱
 
-    private int qq; //QQ
+    private String qq; //QQ
 
     public Person() {
     }
 
-    public Person(String id, String name, int age, String mobile, String email, int qq) {
+    public Person(String id, String name, String age, String mobile, String email, String qq) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -37,33 +37,33 @@ public class Person {
     }
 
     @Override
+    public String toString() {
+        return "Person{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", email='" + email + '\'' +
+                ", qq='" + qq + '\'' +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return age == person.age &&
-                qq == person.qq &&
-                id.equals(person.id) &&
+        return id.equals(person.id) &&
                 name.equals(person.name) &&
+                age.equals(person.age) &&
                 mobile.equals(person.mobile) &&
-                email.equals(person.email);
+                email.equals(person.email) &&
+                qq.equals(person.qq);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, name, age, mobile, email, qq);
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", mobile='" + mobile + '\'' +
-                ", email='" + email + '\'' +
-                ", qq=" + qq +
-                '}';
     }
 
     public String getId() {
@@ -82,11 +82,11 @@ public class Person {
         this.name = name;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -106,11 +106,11 @@ public class Person {
         this.email = email;
     }
 
-    public int getQq() {
+    public String getQq() {
         return qq;
     }
 
-    public void setQq(int qq) {
+    public void setQq(String qq) {
         this.qq = qq;
     }
 }

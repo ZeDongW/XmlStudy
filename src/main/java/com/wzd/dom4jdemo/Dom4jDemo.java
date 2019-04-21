@@ -58,13 +58,13 @@ public class Dom4jDemo {
                     if("name".equals(element.getName())){
                         p.setName(element.getText());
                     } else if("age".equals(element.getName())){
-                        p.setAge(Integer.parseInt(element.getText()));
+                        p.setAge(element.getText());
                     } else if("mobile".equals(element.getName())){
                        p.setMobile(element.getText());
                     } else if("email".equals(element.getName())){
                         p.setEmail(element.getText());
                     } else if("qq".equals(element.getName())){
-                        p.setQq(Integer.parseInt(element.getText()));
+                        p.setQq(element.getText());
                     }
                 }
                 list.add(p);
